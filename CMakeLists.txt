@@ -23,14 +23,13 @@ link_directories(/usr/local/cuda/lib64)
 
 
 # OpenCV
-# find_package(OpenCV 3.4.8 REQUIRED PATHS ../extra/opencv348)
-find_package(OpenCV REQUIRED)
+find_package(OpenCV 3.4.8 REQUIRED PATHS /root/PLATFORM/3rdparty/opencv348)
 message(${OpenCV_VERSION})
 message(${OpenCV_LIBS})
 include_directories( ${OpenCV_INCLUDE_DIRS})
 
 # TensorRT
-set(TENSORRT_ROOT /home/ubuntu/PLATFORM/3rdparty/TensorRT-7.0.0.11)
+set(TENSORRT_ROOT /root/PLATFORM/3rdparty/TensorRT-7.0.0.11)
 include_directories(${TENSORRT_ROOT}/include)
 link_directories(${TENSORRT_ROOT}/lib)
 
