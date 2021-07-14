@@ -17,9 +17,9 @@ ReID::~ReID()
     _impl = NULL;
 }
 
-bool ReID::init(const std::string &weights_path_, const std::string &engine_path_)
+bool ReID::init(const std::string &engine_path_)
 {
-    return _impl->_reid.init(weights_path_, engine_path_);
+    return _impl->_reid.init(engine_path_);
 }
 
 bool ReID::extract_feature(const std::vector<cv::Mat> &imgs_, std::vector<cv::Mat> &features_)

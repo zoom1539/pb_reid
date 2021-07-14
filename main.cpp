@@ -10,9 +10,8 @@ int main()
     ReID reid;
 
     //
-    std::string weights_path = "../lib/extra/fastrt/sbs_R50-ibn.wts";
     std::string engine_path = "../lib/extra/fastrt/sbs_R50-ibn.engine";
-    bool is_init = reid.init(weights_path, engine_path);
+    bool is_init = reid.init(engine_path);
     if(!is_init)
     {
         std::cout << "init fail\n";

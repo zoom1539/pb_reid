@@ -28,10 +28,11 @@ _ReID::~_ReID()
     }
 }
 
-bool _ReID::init(const std::string &weights_path_, const std::string &engine_path_)
+bool _ReID::init(const std::string &engine_path_)
 {
+    std::string weights_path = "";
     trt::ModelConfig modelCfg { 
-        weights_path_,
+        weights_path,
         MAX_BATCH_SIZE,
         INPUT_H,
         INPUT_W,
